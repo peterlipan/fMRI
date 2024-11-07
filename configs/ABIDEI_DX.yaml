@@ -1,0 +1,37 @@
+# distributed training
+nodes: 1
+gpus: 2
+nr: 0
+workers: 0
+visible_gpus: "0,1"
+
+# Paths
+data_root: "/home/r20user17/Documents/ABIDE_pcp/cpac/nofilt_noglobal"
+csv_path: "./datasets/splits/ABIDEI_ROI.csv"
+checkpoints: "./checkpoints"
+
+# Model Options
+backbone: "groupvit"
+aggregator: "pool"
+embed_dim: 352
+expand: 1
+
+# Dataset Options
+dataset: "ABIDEI"
+task: "DX"
+KFold: 10
+fold: 0
+
+# Training Options
+seed: 42
+batch_size: 16
+num_roi: 392 # for cc 400 atlas
+epochs: 50
+
+# Optimization options
+lr: 2.0e-2
+dropout: 0.5
+weight_decay: 0.1
+warmup_epochs: 10
+scheduler: True
+
