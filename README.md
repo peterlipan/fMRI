@@ -1,2 +1,1 @@
-# mia
-MIA revision
+# fMRI classification
